@@ -81,4 +81,27 @@ alert( "Tea wanted: " + isTeaWanted ); // true
 ## Operators
 JavaScript supports the following operators:
 ### Arithmetical
+Regular: ``* + - /``, also ``%`` for the remainder and ``**`` for power of a number.
+
+The binary plus ``+`` concatenates strings. And if any of the operands is a string, the other one is converted to string too:
+```JavaScript
+alert( '1' + 2 ); // '12', string
+alert( 1 + '2' ); // '12', string
+```
+### Assignments
+There is a simple assignment: ``a = b`` and combined ones like ``a *= 2``.
+
+### Bitwise
+Bitwise operators work with 32-bit integers at the lowest, bit-level: see the docs when they are needed.
+
+### Conditional
+The only operator with three parameters: ```JavaScript cond ? resultA : resultB```. If cond is truthy, returns resultA, otherwise resultB.
+
+### Logical operators
+Logical AND && and OR || perform short-circuit evaluation and then return the value where it stopped (not necessary true/false). Logical NOT ! converts the operand to boolean type and returns the inverse value.
+
+### Nullish coalescing operator
+The ?? operator provides a way to choose a defined value from a list of variables. The result of a ?? b is a unless it’s null/undefined, then b.
+
+
 
