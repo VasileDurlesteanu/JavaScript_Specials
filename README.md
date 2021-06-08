@@ -12,6 +12,8 @@ Usually, a line-break is also treated as a delimiter, so that would also work:
 alert('Hello')
 alert('World')
 ```
+
+
 ## Strict mode
 To fully enable all features of modern JavaScript, we should start scripts with "use strict".
 ``` JavaScript
@@ -20,6 +22,7 @@ To fully enable all features of modern JavaScript, we should start scripts with 
 ```
 The directive must be at the top of a script or at the beginning of a function body.
 Without "use strict", everything still works, but some features behave in the old-fashion, “compatible” way. 
+
 
 ## Variables
 
@@ -55,6 +58,7 @@ typeof null == "object" // error in the language
 typeof function(){} == "function" // functions are treated specially
 ```
 
+
 ## Interaction 
 ```JavaScript
 prompt(question, [default])
@@ -78,8 +82,12 @@ let isTeaWanted = confirm("Do you want some tea?");
 alert( "Visitor: " + userName ); // Alice
 alert( "Tea wanted: " + isTeaWanted ); // true
 ```
+
+
 ## Operators
 JavaScript supports the following operators:
+
+
 ### Arithmetical
 Regular: ``* + - /``, also ``%`` for the remainder and ``**`` for power of a number.
 
@@ -88,20 +96,88 @@ The binary plus ``+`` concatenates strings. And if any of the operands is a stri
 alert( '1' + 2 ); // '12', string
 alert( 1 + '2' ); // '12', string
 ```
+
+
 ### Assignments
 There is a simple assignment: ``a = b`` and combined ones like ``a *= 2``.
+
 
 ### Bitwise
 Bitwise operators work with 32-bit integers at the lowest, bit-level: see the docs when they are needed.
 
+
 ### Conditional
 The only operator with three parameters: `` cond ? resultA : resultB``. If cond is truthy, returns resultA, otherwise resultB.
 
+
 ### Logical operators
 Logical AND ``&&`` and OR ``||`` perform short-circuit evaluation and then return the value where it stopped (not necessary true/false). Logical NOT ``!`` converts the operand to boolean type and returns the inverse value.
+
 
 ### Nullish coalescing operator
 The ``??`` operator provides a way to choose a defined value from a list of variables. The result of ``a ?? b`` is ``a`` unless it’s null/undefined, then ``b``.
 
 
+### Comparisons
+Equality check ``==`` for values of different types converts them to a number (except null and undefined that equal each other and nothing else), so these are equal:
+
+```JavaScript
+alert( 0 == false ); // true
+alert( 0 == '' ); // true
+```
+
+Other comparisons convert to a number as well.
+
+The strict equality operator ``===`` doesn’t do the conversion: different types always mean different values for it.
+
+Values null and undefined are special: they equal ``==`` each other and don’t equal anything else.
+
+Greater/less comparisons compare strings character-by-character, other types are converted to a number.
+
+
+## Loops
+3 types of loops:
+```JavaScript
+// 1
+while (condition) {
+  ...
+}
+
+// 2
+do {
+  ...
+} while (condition);
+
+// 3
+for(let i = 0; i < 10; i++) {
+  ...
+}
+```
+
+The variable declared in ``for(let...)`` loop is visible only inside the loop. But we can also omit let and reuse an existing variable.
+
+Directives ``break/continue`` allow to exit the whole loop/current iteration. Use labels to break nested loops.
+
+
+## The “switch” construct
+
+The “switch” construct can replace multiple if checks. It uses === (strict equality) for comparisons.
+
+For instance:
+```JavaScript
+let age = prompt('Your age?', 18);
+
+switch (age) {
+  case 18:
+    alert("Won't work"); // the result of prompt is a string, not a number
+    break;
+
+  case "18":
+    alert("This works!");
+    break;
+
+  default:
+    alert("Any value not equal to one above");
+}
+```
 
