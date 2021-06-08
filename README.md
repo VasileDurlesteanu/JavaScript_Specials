@@ -70,3 +70,15 @@ alert(message)
 Output a message.
 
 All these functions are modal, they pause the code execution and prevent the visitor from interacting with the page until they answer.
+
+```JavaScript
+let userName = prompt("Your name?", "Alice");
+let isTeaWanted = confirm("Do you want some tea?");
+
+alert( "Visitor: " + userName ); // Alice
+alert( "Tea wanted: " + isTeaWanted ); // true
+```
+## Operators
+JavaScript supports the following operators:
+### Arithmetical
+
