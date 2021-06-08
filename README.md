@@ -182,7 +182,7 @@ switch (age) {
 ```
 
 
-##Functions
+##  Functions
 Three ways to create a function in JavaScript:
 
 Function Declaration: the function in the main code flow
