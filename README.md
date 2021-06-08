@@ -219,6 +219,6 @@ let sayHi = () => alert("Hello");
 let double = n => n * 2;
 ```
 
-Functions may have local variables: those declared inside its ``body`` or its parameter ``list``. Such variables are only visible inside the function.
+Functions may have local variables: those declared inside its body or its parameter list. Such variables are only visible inside the function.
 Parameters can have default values: ``function sum(a = 1, b = 2) {...}``.
 Functions always return something. If there’s no return statement, then the result is undefined.
