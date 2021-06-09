@@ -28,15 +28,16 @@ Without "use strict", everything still works, but some features behave in the ol
 
 Can be declared using:
 
-let
-const (constant, can’t be changed)
-var (old-style, will see later)
+* ```let ```
+* ```const``` (constant, can’t be changed)
+* ```var``` (old-style, will see later)
+
 A variable name can include:
 
-Letters and digits, but the first character may not be a digit.
-Characters $ and _ are normal, on par with letters.
-Non-Latin alphabets and hieroglyphs are also allowed, but commonly not used.
-Variables are dynamically typed. They can store any value:
+* Letters and digits, but the first character may not be a digit.
+* Characters ```$``` and ```_``` are normal, on par with letters.
+* Non-Latin alphabets and hieroglyphs are also allowed, but commonly not used.
+* Variables are dynamically typed. They can store any value:
 ``` JavaScript
 let x = 5;
 x = "John";
@@ -44,13 +45,13 @@ x = "John";
 
 There are 8 data types:
 
-number for both floating-point and integer numbers,
-bigint for integer numbers of arbitrary length,
-string for strings,
-boolean for logical values: true/false,
-null – a type with a single value null, meaning “empty” or “does not exist”,
-undefined – a type with a single value undefined, meaning “not assigned”,
-object and symbol – for complex data structures and unique identifiers, we haven’t learnt them yet.
+* ```number``` for both floating-point and integer numbers
+* ```bigint``` for integer numbers of arbitrary length
+* ```string``` for strings
+* ```boolean``` for logical values: ```true/false```
+* ```null``` – a type with a single value null, meaning “empty” or “does not exist”
+* ```undefined``` – a type with a single value undefined, meaning “not assigned”
+* ``object``` and ```symbol``` – for complex data structures and unique identifiers, we haven’t learnt them yet
 
 The typeof operator returns the type for a value, with two exceptions:
 ```JavaScript
